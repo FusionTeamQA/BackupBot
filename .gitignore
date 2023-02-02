@@ -1,0 +1,6 @@
+*.log
+pyvenv.cfg
+bin
+lib
+bd
+bot.py
