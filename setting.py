@@ -2,19 +2,6 @@ token = '5711969178:AAEXr5Ta-fpZGt7-RNc8NjnnZqkdvrGkWOQ'
 admin_id_ugraswim = 597010493
 admin_hr_id = 563921309
 
-#database
-db_host = "194.67.206.71"
-db_user = "postgres"
-db_password = "AAAqqq111"
-db_name = "fusion"
-
-
-
-
-
-
-
-
 
 # Общие ссылки
 website = "https://fusion-tech.pro"
@@ -42,3 +29,4 @@ VK_GROUP_CHAT = 'https://vk.com/im?sel=-158106363'
 BEHANCE = 'https://www.behance.net/fusion-tech'
 HABR = 'https://career.habr.com/companies/fusion-tech'
 LINKEDIN = 'http://linkedin.com/company/fusion-web-dev'
+INSTAGRAM = "https://www.instagram.com/fusion.tech.global/"

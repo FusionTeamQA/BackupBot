@@ -2,11 +2,10 @@
 import telebot
 from telebot import types
 import setting
-import psycopg2
+import sqlite3
 import logging
 import os, sys
 from requests.exceptions import ConnectionError, ReadTimeout
-from setting import db_host, db_user, db_password, db_name
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s',
                     level=logging.INFO,
@@ -35,12 +34,7 @@ class User:
 
 @bot.message_handler(commands=['start'])  # стартовая команда
 def start(message):
-    conn = psycopg2.connect(
-        host=db_host,
-        user=db_user,
-        password=db_password,
-        database=db_name
-    )
+    conn = sqlite3.connect('bd/database_fusion.db')
     cursor = conn.cursor()
     cursor.execute('''CREATE TABLE IF NOT EXISTS users(
         id INTEGER, 
@@ -570,7 +564,7 @@ def send_z(message):
     #                  + f'Контактные данные: {user.nums} \n'
     #
     #                  + f'ID юзера: {user_chats}')
-    conn = psycopg2.connect(dbname='db/fusion_bot', user='Fusion', password='root', host='localhost')
+    conn = sqlite3.connect('bd/database_fusion.db')
     cursor = conn.cursor()
     user = user_dict[chat_id]
     cursor.execute('''CREATE TABLE IF NOT EXISTS orders(
