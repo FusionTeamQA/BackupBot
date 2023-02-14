@@ -1,2 +1,0 @@
-tokenbot = '5801609804:AAHrCTS4ZDHDiTDibTvey6Q8KeFC5-Tt3es'
-groupid = '597010493'
